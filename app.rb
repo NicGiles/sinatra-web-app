@@ -14,13 +14,17 @@ end
 
 get '/random-cat' do
   @name = ["Amigo", "Oscar", "Viking", "Mittens"].sample
+  @hobby = ["Micing", "Fishing", "Loitering", "Fencing", "Chilling"].sample
   erb(:index)
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   @hobby = params[:hobby]
-  @age = params[:age]
   erb(:index)
+end
+
+get '/form' do
+erb(:cat_form)
 end
