@@ -21,5 +21,6 @@ get '/named-cat' do
   p params
   @name = params[:name]
   @hobby = params[:hobby]
+  @age = params[:age]
   erb(:index)
 end

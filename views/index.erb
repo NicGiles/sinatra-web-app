@@ -1,5 +1,17 @@
+<% if @name %>
 <h1>My name is <%=@name%></h1>
-<h1>I like <%=@hobby%></h1>
+<h1>My hobby is <%=@hobby%></h1>
+<% else %>
+<div>
+  <form action='/named-cat'>
+    <input type='text' name='name'>
+    <input type='text' name='hobby'>
+    <input type='number' name='age'>
+    <input type='submit' value=Submit>
+  </form>
+</div>
+<% end %>
+
 <div>
   <img src='http://bit.ly/1eze8aE' style='border:5px dashed red'>
 </div>
